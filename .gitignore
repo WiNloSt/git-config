@@ -1,0 +1,11 @@
+# Ignore everything
+*
+*/
+.*/
+
+# But not these files...
+!.gitconfig
+!.gitignore
+
+# ...even if they are in subdirectories
+# !*/
