@@ -18,10 +18,12 @@
 	delete-pr = !"git branch -d $(git branch | grep pr/*)"
 	delete-merged-branch = !"git branch --merged | grep -v '*' | grep -v master | grep -v develop | xargs -n 1 git branch -d"
 [push]
-	default = simple
+	default = current
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
 [fetch]
 	prune = true
+[remote]
+	pushdefault = origin
